@@ -4,14 +4,13 @@ import 'package:weather_app/constants/text_styles.dart';
 import 'package:weather_app/extensions/datetime.dart';
 import 'package:weather_app/providers/current_weather_provider.dart';
 import 'package:weather_app/views/gradient_container.dart';
-
+import 'package:weather_app/views/hourly_forecast_view.dart';
 import '../views/weather_info.dart';
 
 class WeatherScreen extends ConsumerWidget {
   const WeatherScreen({super.key});
 
   @override
-import 'package:weather_app/views/hourly_forecast_view.dart';
   Widget build(BuildContext context, WidgetRef ref) {
     final weatherData = ref.watch(currentWeatherProvider);
 
@@ -63,6 +62,7 @@ import 'package:weather_app/views/hourly_forecast_view.dart';
                   ],
                 ),
                 const SizedBox(height: 15,),
+                const HourlyForecastView(),
 
               ],
             )
