@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/constants/app_colors.dart';
+import 'package:weather_app/screens/forecast_screen.dart';
+import 'package:weather_app/screens/search_screen.dart';
 import 'package:weather_app/screens/weather_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -39,8 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
   // Specific Screen for each navigation selections
   final _screens = [
     const WeatherScreen(),
-    const Center(child: Text('Search Screen')),
-    const Center(child: Text('Weather Screen')),
+    const SearchScreen(),
+    const ForecastScreen(),
     const Center(child: Text('Settings Screen')),
   ];
 
